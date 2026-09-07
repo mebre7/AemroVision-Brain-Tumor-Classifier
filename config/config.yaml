@@ -21,4 +21,4 @@ evaluation:
   root_dir: artifacts/evaluation
   path_of_model: artifacts/training/model.keras
   metrics_file_path: artifacts/evaluation/metrics.json
-  mlflow_uri: https://dagshub.com/mebratucheka7/AemroVision-Brain-Tumor-Classifier
+  mlflow_uri: https://dagshub.com/mebratucheka7/AemroVision-Brain-Tumor-Classifier.mlflow
