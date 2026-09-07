@@ -2,7 +2,8 @@ import os
 from cnnClassifier.entity.config_entity import (
     DataIngestionConfig,
     PrepareBaseModelConfig,
-    TrainingConfig
+    TrainingConfig,
+    EvaluationConfig
 )
 from cnnClassifier.utils.common import (
     read_yaml, create_directories
@@ -55,4 +56,21 @@ class ConfigurationManager:
             params_batch_size=params.BATCH_SIZE,
             params_is_augmentation=params.AUGMENTATION,
             params_image_size=params.IMAGE_SIZE
+        )
+
+    def get_evaluation_config(self) -> EvaluationConfig:
+        params = self.params
+        eval_config = self.config.evaluation
+        training_config = self.config.training
+        raw_data = self.config.data_ingestion.unzip_dir
+        create_directories([eval_config.root_dir])
+        return EvaluationConfig(
+            root_dir=Path(eval_config.root_dir),
+            path_of_model=Path(training_config.trained_model_path),
+            training_data=Path(os.path.join(raw_data, "Brain_Tumor_MRI_dataset", "Testing")),
+            all_params=params,
+            metrics_file_path=Path(eval_config.metrics_file_path),
+            mlflow_uri=eval_config.mlflow_uri,
+            params_image_size=params.IMAGE_SIZE,
+            params_batch_size=params.BATCH_SIZE
         )

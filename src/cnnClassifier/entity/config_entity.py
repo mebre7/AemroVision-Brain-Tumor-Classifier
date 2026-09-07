@@ -29,3 +29,14 @@ class TrainingConfig:
     params_batch_size: int
     params_is_augmentation: bool
     params_image_size: list
+
+@dataclass
+class EvaluationConfig:
+    root_dir: Path
+    path_of_model: Path
+    training_data: Path
+    all_params: dict
+    metrics_file_path: Path
+    mlflow_uri: str
+    params_image_size: list
+    params_batch_size: int
