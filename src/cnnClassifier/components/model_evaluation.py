@@ -16,7 +16,6 @@ class Evaluation:
     def _valid_generator(self):
         datagenerator_kwargs = dict(
             rescale=1./255,
-            validation_split=0.20
         )
 
         dataflow_kwargs = dict(
@@ -43,8 +42,12 @@ class Evaluation:
     def evaluation(self):
         self.model = self.load_model(self.config.path_of_model)
         self._valid_generator()
-        self.score =  self.model.evaluate(self.valid_generator)
-        self.score = self.score if isinstance(self.score, list) else [self.score, 0.0]
+
+        raw_score = self.model.evaluate(self.valid_generator)
+        if isinstance(raw_score, float):
+            self.score = [raw_score, 0.0]
+        else:
+            self.score = list(raw_score)
 
     def save_score(self):
         scores = {"loss": self.score[0], "accuracy": self.score[1]}
@@ -52,9 +55,8 @@ class Evaluation:
         save_json(path=Path("scores.json"), data=scores)  # Root copy for DVC
 
     def log_into_mlflow(self):
-        # Initialize DagsHub with YOUR repo details
         dagshub.init(
-            repo_owner='<YOUR_DAGSHUB_USERNAME>', 
+            repo_owner='mebratucheka7', 
             repo_name='AemroVision-Brain-Tumor-Classifier', 
             mlflow=True
         )
