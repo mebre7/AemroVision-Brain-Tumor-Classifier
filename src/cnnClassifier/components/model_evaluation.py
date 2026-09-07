@@ -30,7 +30,6 @@ class Evaluation:
 
         self.valid_generator = valid_datagenerator.flow_from_directory(
             directory=self.config.training_data,
-            subset="validation",
             shuffle=False,
             **dataflow_kwargs
         )
