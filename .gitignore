@@ -10,7 +10,6 @@ diagram.excalidraw
 __pycache__/
 *.py[codz]
 *$py.class
-test.yaml
 
 # C extensions
 *.so

@@ -29,6 +29,3 @@ An end-to-end production-grade computer vision system designed to classify brain
 ├── setup.py                 # Package installation configuration
 └── dvc.yaml                 # Data Version Control pipeline configuration
 ```
-
-
-> This project is currently under development!
