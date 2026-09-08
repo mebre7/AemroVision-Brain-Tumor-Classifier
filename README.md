@@ -1,3 +1,5 @@
+
+![Logo](static/images/light.png)
 # AemroVision: Automated Brain Tumor MRI Classification
 
 An end-to-end production-grade computer vision system designed to classify brain MRI scans into four distinct categories: **Glioma, Meningioma, Pituitary, and No Tumor**. This project emphasizes modular software engineering, clean configuration-driven architecture, and robust deployment workflows.
