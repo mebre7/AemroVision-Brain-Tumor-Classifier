@@ -1,0 +1,37 @@
+# Git and IDE metadata
+.git/
+.hg/
+.svn/
+.idea/
+.vscode/
+
+# Python byte code and virtual environments
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+ENV/
+
+# Temporary and log files
+logs/
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+inputImage.jpg
+tempCodeRunnerFile.py
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment files
+.env
+.envrc
+
+# Testing & Coverage
+.pytest_cache/
+.tox/
+.coverage
+htmlcov/

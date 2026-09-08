@@ -2,6 +2,8 @@ tensorflow
 pandas
 python-dotenv
 gdown
+fastapi
+uvicorn
 dvc
 dagshub
 mlflow
@@ -16,6 +18,4 @@ ensure
 joblib
 types-pyYAML
 scipy
-#Flask
-#Flask-Cors
 -e .
