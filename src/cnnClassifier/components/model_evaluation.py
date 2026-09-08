@@ -51,7 +51,7 @@ class Evaluation:
     def save_score(self):
         scores = {"loss": self.score[0], "accuracy": self.score[1]}
         save_json(path=Path(self.config.metrics_file_path), data=scores)
-        save_json(path=Path("scores.json"), data=scores)  # Root copy for DVC
+        save_json(path=Path("metrics.json"), data=scores)  # Root copy for DVC
 
     def log_into_mlflow(self):
         dagshub.init(

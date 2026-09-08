@@ -45,5 +45,5 @@ stages:
       - IMAGE_SIZE
       - BATCH_SIZE
     metrics:
-      - artifacts/evaluation/scores.json:
+      - artifacts/evaluation/metrics.json:
           cache: false
