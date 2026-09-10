@@ -1,3 +1,5 @@
+import os
+import shutil
 import tensorflow as tf
 from pathlib import Path
 from cnnClassifier.entity.config_entity import TrainingConfig
@@ -72,3 +74,5 @@ class ModelTraining:
             path=self.config.trained_model_path,
             model=self.model
         )
+        os.makedirs("model", exist_ok=True)
+        shutil.copy(self.config.trained_model_path, "model/model.keras")

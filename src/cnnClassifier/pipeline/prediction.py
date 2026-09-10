@@ -12,7 +12,7 @@ class PredictionPipeline:
 
     def predict(self):
         # Load the model
-        model_path = Path("artifacts/training/model.keras")
+        model_path = Path(os.path.join("model","model.keras"))
         model = load_model(model_path)
 
         # Prepare the image for prediction = Preprocessing the image
