@@ -1,0 +1,23 @@
+tensorflow
+pandas
+python-dotenv
+gdown
+fastapi
+uvicorn
+dvc
+dagshub
+mlflow
+notebook
+numpy
+matplotlib
+seaborn
+python-box
+pyYAML
+tqdm
+ensure
+joblib
+types-pyYAML
+scipy
+pytest
+httpx
+-e .

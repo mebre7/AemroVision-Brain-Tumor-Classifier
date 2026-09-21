@@ -1,0 +1,35 @@
+.github/
+.venv/
+.git/
+.gitignore
+
+# Secrets & Local Configurations
+.env
+*.env
+
+# Large datasets & stage outputs
+artifacts/
+logs/
+
+# Research & Jupyter Notebook
+research/
+*.ipynb
+*.part
+
+# Python cache & build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+build/
+dist/
+
+# IDE & Editor Configurations
+.idea/
+.vscode/
+
+# Documentation, diagrams & temporary scripts
+media/
+notes.md
+testing.py
+*.excalidraw

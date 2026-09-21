@@ -1,3 +1,5 @@
+from dotenv import load_dotenv
+load_dotenv()
 from cnnClassifier.pipeline.stage_01_data_ingestion import DataIngestionPipeline
 from cnnClassifier.pipeline.stage_02_prepare_base_model import PrepareBaseModelPipeline
 from cnnClassifier.pipeline.stage_03_model_training import ModelTrainingPipeline
